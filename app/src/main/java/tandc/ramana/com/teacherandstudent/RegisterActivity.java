@@ -42,7 +42,6 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 public class RegisterActivity  extends Activity{
 	
-	
 
 	EditText  name,rollNumber,gmail,password;
 	Spinner year,userType;

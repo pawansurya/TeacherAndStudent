@@ -2,6 +2,11 @@ package tandc.ramana.com.teacherandstudent;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.net.Uri;
+import android.text.Html;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +57,7 @@ public class ChatAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
-        ChatMessage chatMessage = getItem(position);
+        final ChatMessage chatMessage = getItem(position);
         LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         if (convertView == null) {
@@ -66,8 +71,28 @@ public class ChatAdapter extends BaseAdapter {
         boolean myMsg = chatMessage.getIsme() ;//Just a dummy check
         //to simulate whether it me or other sender
         setAlignment(holder, myMsg);
-        holder.txtMessage.setText(chatMessage.getMessage());
+        holder.txtMessage.setText(Html.fromHtml(chatMessage.getMessage()));
         holder.txtInfo.setText(chatMessage.getDate());
+
+
+        if(chatMessage.getMessage().contains("firebase")){
+            holder.txtMessage.setTextColor(Color.BLUE);
+            holder.txtMessage.setPaintFlags(holder.txtMessage.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        }
+
+
+            holder.txtMessage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(chatMessage.getMessage().contains("firebase")) {
+                        String url = chatMessage.getMessage();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        context.startActivity(i);
+                    }
+                }
+            });
+
 
         return convertView;
     }

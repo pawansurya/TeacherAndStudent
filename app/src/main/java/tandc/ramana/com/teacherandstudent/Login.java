@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.gms.internal.ho;
+//import com.google.android.gms.internal.ho;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

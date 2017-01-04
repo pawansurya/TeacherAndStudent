@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "792491435153",
+    "firebase_url": "https://test-bf857.firebaseio.com",
+    "project_id": "test-bf857",
+    "storage_bucket": "test-bf857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792491435153:android:f07df8c5baa878f4",
+        "android_client_info": {
+          "package_name": "proj.novo.com.studentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792491435153-23ig2li5o406nr1tih23rb6unn87m68p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA91xH_pYGft5pBv9xDCrQMvCfZsWNpEhw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:792491435153:android:ace0b3efc48b3c6b",
+        "android_client_info": {
+          "package_name": "tandc.ramana.com.teacherandstudent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "792491435153-23ig2li5o406nr1tih23rb6unn87m68p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA91xH_pYGft5pBv9xDCrQMvCfZsWNpEhw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

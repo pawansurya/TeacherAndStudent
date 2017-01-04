@@ -5,6 +5,11 @@ android {
     buildToolsVersion "24.0.1"
 
     useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        javaMaxHeapSize "2g"
+        preDexLibraries = false
+    }
+
 
     defaultConfig {
         applicationId "tandc.ramana.com.teacherandstudent"
@@ -12,7 +17,14 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
+
+
+    aaptOptions
+            {
+                cruncherEnabled = false
+            }
     buildTypes {
         release {
             minifyEnabled false
@@ -31,11 +43,15 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.1.1'
-    compile 'com.google.android.gms:play-services:6.5.87'
+    compile 'com.google.android.gms:play-services:9.6.1'
     compile files('libs/httpclient-4.5.1.jar')
     compile files('libs/httpcore-4.1.jar')
+    compile 'com.google.firebase:firebase-core:9.6.1'
+
     compile files('libs/gcm.jar')
     compile files('libs/httpmime-4.3.jar')
     compile files('libs/okhttp-1.2.1-jar-with-dependencies.jar')
 
    }
+apply plugin: 'com.google.gms.google-services'
+
