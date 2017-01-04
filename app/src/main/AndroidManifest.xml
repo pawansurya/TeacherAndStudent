@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission  android:name="android.permission.READ_PHONE_STATE" />
 
-
     <!-- GCM requires a Google account. -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
@@ -65,7 +64,8 @@
             </intent-filter>
         </receiver>
         <service android:name=".GCMIntentService"></service>
-        <activity android:name=".Home"></activity>
+        <activity android:name=".Home"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".Login"></activity>
 
